@@ -1,18 +1,15 @@
-// handle submit event
-
 var form = document.querySelector("form");
 var list = document.getElementById("todo-list");
 var input = document.querySelector("input");
 var allListItems = document.getElementsByClassName("listItems");
-console.log(form);
-
-console.log(list);
+// console.log(form);
+// console.log(list);
 
 form.onsubmit = function (e) {
     e.preventDefault();
-    console.log("submitted");
+    // console.log("submitted");
     var inputText = document.querySelector("input").value;
-    console.log(inputText);
+    // console.log(inputText);
 
     // trim() removes whitespaces, link - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 
@@ -21,7 +18,7 @@ form.onsubmit = function (e) {
     //if nothing left after trimming, returns false
     if (inputText.trim() == "") {
         containsCharacter = false;
-        console.log("all spaces");
+        // console.log("all spaces");
     }
 
     if (inputText && containsCharacter) {
@@ -29,7 +26,7 @@ form.onsubmit = function (e) {
         input.value = "";
     }
     allListItems = document.getElementsByClassName("listItems");
-    console.log(allListItems[0]);
+    // console.log(allListItems[0]);
 
     for (let i = 0; i < allListItems.length; i++) {
         // console.log("im looping " + i);
@@ -46,7 +43,7 @@ form.onsubmit = function (e) {
         });
     }
 };
-console.log("test " + allListItems.length);
+// console.log("test " + allListItems.length);
 
 
 // for (let i = 0; i < allListItems.length; i++) {
