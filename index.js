@@ -21,7 +21,7 @@ form.onsubmit = function (e) {
         // console.log("all spaces");
     }
 
-    if (inputText && containsCharacter) {
+    if (containsCharacter) {
         list.innerHTML += `<li class ="listItems"><button>${inputText}</button></li>`;
         input.value = "";
     }
@@ -44,7 +44,6 @@ form.onsubmit = function (e) {
     }
 };
 // console.log("test " + allListItems.length);
-
 
 // for (let i = 0; i < allListItems.length; i++) {
 //     console.log("looping " + i);
